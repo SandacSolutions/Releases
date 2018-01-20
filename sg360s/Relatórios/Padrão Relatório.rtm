@@ -1,0 +1,1148 @@
+object ppReport: TppReport
+  AutoStop = False
+  DataPipeline = daFireDACQueryDataView1.vv_empresa
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'SG360S Rel'#225'torio'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  Template.DatabaseSettings.DataPipeline = ppDBPipeline
+  Template.DatabaseSettings.Name = 'Padr'#227'o'
+  Template.DatabaseSettings.NameField = 'TITULO'
+  Template.DatabaseSettings.TemplateField = 'RELATORIO'
+  Template.FileName = 'C:\Users\Carlos\Desktop\Padr'#227'o Relat'#243'rio.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Portuguese (Brazil)'
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.PageDisplay = pdContinuous
+  PreviewFormSettings.WindowState = wsMaximized
+  PreviewFormSettings.ZoomSetting = zsPageWidth
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<Texto a localizar>'
+  TextSearchSettings.Enabled = True
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 106
+  Top = 10
+  Version = '16.01'
+  mmColumnWidth = 197300
+  DataPipelineName = 'vv_empresa'
+  object ppHeaderBand1: TppHeaderBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 35719
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText1'
+      DataField = 'razao_social'
+      DataPipeline = daFireDACQueryDataView1.vv_empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 18
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'vv_empresa'
+      mmHeight = 7938
+      mmLeft = 29369
+      mmTop = 1058
+      mmWidth = 165629
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBImage1: TppDBImage
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBImage1'
+      AlignHorizontal = ahCenter
+      AlignVertical = avCenter
+      MaintainAspectRatio = False
+      DataField = 'logo'
+      DataPipeline = daFireDACQueryDataView1.vv_empresa
+      GraphicType = 'AutoDetect'
+      DataPipelineName = 'vv_empresa'
+      mmHeight = 23813
+      mmLeft = 1323
+      mmTop = 1058
+      mmWidth = 27252
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel1: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label1'
+      AutoSize = False
+      Caption = 'Cidade'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 122238
+      mmTop = 20108
+      mmWidth = 13758
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText2: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText2'
+      DataField = 'cidade'
+      DataPipeline = daFireDACQueryDataView1.vv_empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'vv_empresa'
+      mmHeight = 4763
+      mmLeft = 137054
+      mmTop = 20108
+      mmWidth = 57944
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel2: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label2'
+      AutoSize = False
+      Caption = 'CNPJ'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 29369
+      mmTop = 9525
+      mmWidth = 11642
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText3: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText3'
+      DataField = 'cnpj'
+      DataPipeline = daFireDACQueryDataView1.vv_empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'vv_empresa'
+      mmHeight = 4763
+      mmLeft = 42069
+      mmTop = 9525
+      mmWidth = 38365
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel3: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label3'
+      AutoSize = False
+      Caption = 'Insc. Estadual'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 102659
+      mmTop = 9525
+      mmWidth = 26723
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText4: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText4'
+      DataField = 'ie'
+      DataPipeline = daFireDACQueryDataView1.vv_empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'vv_empresa'
+      mmHeight = 4763
+      mmLeft = 130440
+      mmTop = 9525
+      mmWidth = 64558
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel4: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label4'
+      AutoSize = False
+      Caption = 'Endereco'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 29369
+      mmTop = 14552
+      mmWidth = 18521
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText5: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText5'
+      DataField = 'endereco'
+      DataPipeline = daFireDACQueryDataView1.vv_empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'vv_empresa'
+      mmHeight = 4763
+      mmLeft = 48683
+      mmTop = 14552
+      mmWidth = 116946
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel5: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label5'
+      AutoSize = False
+      Caption = 'N'#186
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 167217
+      mmTop = 14552
+      mmWidth = 5556
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText6: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText6'
+      DataField = 'numero'
+      DataPipeline = daFireDACQueryDataView1.vv_empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'vv_empresa'
+      mmHeight = 4763
+      mmLeft = 174890
+      mmTop = 14552
+      mmWidth = 20108
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel6: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label6'
+      AutoSize = False
+      Caption = 'Bairro'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 29369
+      mmTop = 20108
+      mmWidth = 11906
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText7: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText7'
+      DataField = 'bairro'
+      DataPipeline = daFireDACQueryDataView1.vv_empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'vv_empresa'
+      mmHeight = 4763
+      mmLeft = 42333
+      mmTop = 20108
+      mmWidth = 78317
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLine1: TppLine
+      DesignLayer = ppDesignLayer1
+      UserName = 'Line1'
+      Weight = 0.750000000000000000
+      mmHeight = 1323
+      mmLeft = 1323
+      mmTop = 25929
+      mmWidth = 193675
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel7: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label7'
+      AutoSize = False
+      Caption = 'T'#237'tulo do Relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      FormField = False
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 7144
+      mmLeft = 1323
+      mmTop = 28575
+      mmWidth = 193675
+      BandType = 0
+      LayerName = Foreground
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 13229
+    mmPrintPosition = 0
+  end
+  object ppFooterBand1: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 6085
+    mmPrintPosition = 0
+    object ppVariable1: TppVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'edtDataAtual'
+      BlankWhenZero = False
+      CalcOrder = 0
+      CalcType = veReportStart
+      DataType = dtDate
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      ResetType = veReportStart
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 172244
+      mmTop = 1058
+      mmWidth = 22754
+      BandType = 8
+      LayerName = Foreground
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daFireDACQueryDataView1: TdaFireDACQueryDataView
+      UserName = 'Query_vv_empresa'
+      Height = 587
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object vv_empresa: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'vv_empresa'
+        object ppField1: TppField
+          FieldAlias = 'codigo'
+          FieldName = 'codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'vv_empresa'
+        end
+        object ppField2: TppField
+          FieldAlias = 'codigo_empresa'
+          FieldName = 'codigo_empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'vv_empresa'
+        end
+        object ppField3: TppField
+          FieldAlias = 'codigo_cidade_ibge'
+          FieldName = 'codigo_cidade_ibge'
+          FieldLength = 7
+          DisplayWidth = 7
+          Position = 2
+          TableName = 'vv_empresa'
+        end
+        object ppField4: TppField
+          FieldAlias = 'nome_fantasia'
+          FieldName = 'nome_fantasia'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 3
+          TableName = 'vv_empresa'
+        end
+        object ppField5: TppField
+          FieldAlias = 'razao_social'
+          FieldName = 'razao_social'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 4
+          TableName = 'vv_empresa'
+        end
+        object ppField6: TppField
+          FieldAlias = 'data_hora_cadastro'
+          FieldName = 'data_hora_cadastro'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 34
+          Position = 5
+          TableName = 'vv_empresa'
+        end
+        object ppField7: TppField
+          FieldAlias = 'cnpj'
+          FieldName = 'cnpj'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 6
+          TableName = 'vv_empresa'
+        end
+        object ppField8: TppField
+          FieldAlias = 'crt'
+          FieldName = 'crt'
+          FieldLength = 8190
+          DisplayWidth = 8190
+          Position = 7
+          TableName = 'vv_empresa'
+        end
+        object ppField9: TppField
+          FieldAlias = 'cnae'
+          FieldName = 'cnae'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'vv_empresa'
+        end
+        object ppField10: TppField
+          FieldAlias = 'ie'
+          FieldName = 'ie'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 9
+          TableName = 'vv_empresa'
+        end
+        object ppField11: TppField
+          FieldAlias = 'im'
+          FieldName = 'im'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 10
+          TableName = 'vv_empresa'
+        end
+        object ppField12: TppField
+          FieldAlias = 'endereco'
+          FieldName = 'endereco'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 11
+          TableName = 'vv_empresa'
+        end
+        object ppField13: TppField
+          FieldAlias = 'numero'
+          FieldName = 'numero'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 12
+          TableName = 'vv_empresa'
+        end
+        object ppField14: TppField
+          FieldAlias = 'complemento'
+          FieldName = 'complemento'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 13
+          TableName = 'vv_empresa'
+        end
+        object ppField15: TppField
+          FieldAlias = 'bairro'
+          FieldName = 'bairro'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 14
+          TableName = 'vv_empresa'
+        end
+        object ppField16: TppField
+          FieldAlias = 'cidade'
+          FieldName = 'cidade'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 15
+          TableName = 'vv_empresa'
+        end
+        object ppField17: TppField
+          FieldAlias = 'uf'
+          FieldName = 'uf'
+          FieldLength = 2
+          DisplayWidth = 2
+          Position = 16
+          TableName = 'vv_empresa'
+        end
+        object ppField18: TppField
+          FieldAlias = 'pais'
+          FieldName = 'pais'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 17
+          TableName = 'vv_empresa'
+        end
+        object ppField19: TppField
+          FieldAlias = 'cep'
+          FieldName = 'cep'
+          FieldLength = 9
+          DisplayWidth = 9
+          Position = 18
+          TableName = 'vv_empresa'
+        end
+        object ppField20: TppField
+          FieldAlias = 'telefone'
+          FieldName = 'telefone'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 19
+          TableName = 'vv_empresa'
+        end
+        object ppField21: TppField
+          FieldAlias = 'celular'
+          FieldName = 'celular'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 20
+          TableName = 'vv_empresa'
+        end
+        object ppField22: TppField
+          FieldAlias = 'site'
+          FieldName = 'site'
+          FieldLength = 1000
+          DisplayWidth = 1000
+          Position = 21
+          TableName = 'vv_empresa'
+        end
+        object ppField23: TppField
+          FieldAlias = 'email'
+          FieldName = 'email'
+          FieldLength = 1000
+          DisplayWidth = 1000
+          Position = 22
+          TableName = 'vv_empresa'
+        end
+        object ppField24: TppField
+          FieldAlias = 'fax'
+          FieldName = 'fax'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 23
+          TableName = 'vv_empresa'
+        end
+        object ppField25: TppField
+          FieldAlias = 'data_fundacao_empresa'
+          FieldName = 'data_fundacao_empresa'
+          FieldLength = 0
+          DataType = dtDate
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'vv_empresa'
+        end
+        object ppField26: TppField
+          FieldAlias = 'logo'
+          FieldName = 'logo'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtBLOB
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'vv_empresa'
+        end
+        object ppField27: TppField
+          FieldAlias = 'observacao'
+          FieldName = 'observacao'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'vv_empresa'
+        end
+        object ppField28: TppField
+          FieldAlias = 'aliquota_iss'
+          FieldName = 'aliquota_iss'
+          FieldLength = 2
+          DataType = dtDouble
+          DisplayWidth = 16
+          Position = 27
+          TableName = 'vv_empresa'
+        end
+        object ppField29: TppField
+          FieldAlias = 'aliquota_icms'
+          FieldName = 'aliquota_icms'
+          FieldLength = 2
+          DataType = dtDouble
+          DisplayWidth = 16
+          Position = 28
+          TableName = 'vv_empresa'
+        end
+        object ppField30: TppField
+          FieldAlias = 'certificado'
+          FieldName = 'certificado'
+          FieldLength = 250
+          DisplayWidth = 250
+          Position = 29
+          TableName = 'vv_empresa'
+        end
+        object ppField31: TppField
+          FieldAlias = 'certificado_senha'
+          FieldName = 'certificado_senha'
+          FieldLength = 250
+          DisplayWidth = 250
+          Position = 30
+          TableName = 'vv_empresa'
+        end
+        object ppField32: TppField
+          FieldAlias = 'ambiente_nfe'
+          FieldName = 'ambiente_nfe'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'vv_empresa'
+        end
+        object ppField33: TppField
+          FieldAlias = 'ambiente_nfce'
+          FieldName = 'ambiente_nfce'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'vv_empresa'
+        end
+      end
+      object daSQL1: TdaSQL
+        CollationType = ctASCII
+        DatabaseName = 'Sg360sConnection'
+        DatabaseType = dtPostgreSQL
+        DataPipelineName = 'vv_empresa'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT "vv_empresa"."codigo", '
+          '       "vv_empresa"."codigo_empresa", '
+          '       "vv_empresa"."codigo_cidade_ibge", '
+          '       "vv_empresa"."nome_fantasia", '
+          '       "vv_empresa"."razao_social", '
+          '       "vv_empresa"."data_hora_cadastro", '
+          '       "vv_empresa"."cnpj", "vv_empresa"."crt", '
+          '       "vv_empresa"."cnae", "vv_empresa"."ie", '
+          '       "vv_empresa"."im", '
+          '       "vv_empresa"."endereco", '
+          '       "vv_empresa"."numero", '
+          '       "vv_empresa"."complemento", '
+          '       "vv_empresa"."bairro", '
+          '       "vv_empresa"."cidade", "vv_empresa"."uf", '
+          '       "vv_empresa"."pais", "vv_empresa"."cep", '
+          '       "vv_empresa"."telefone", '
+          '       "vv_empresa"."celular", '
+          '       "vv_empresa"."site", "vv_empresa"."email", '
+          '       "vv_empresa"."fax", '
+          '       "vv_empresa"."data_fundacao_empresa", '
+          '       "vv_empresa"."logo", '
+          '       "vv_empresa"."observacao", '
+          '       "vv_empresa"."aliquota_iss", '
+          '       "vv_empresa"."aliquota_icms", '
+          '       "vv_empresa"."certificado", '
+          '       "vv_empresa"."certificado_senha", '
+          '       "vv_empresa"."ambiente_nfe", '
+          '       "vv_empresa"."ambiente_nfce"'
+          'FROM "vv_empresa" "vv_empresa"')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'codigo'
+          FieldLength = 0
+          FieldName = 'codigo'
+          SQLFieldName = 'codigo'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField2: TdaField
+          Alias = 'codigo_empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'codigo_empresa'
+          FieldLength = 0
+          FieldName = 'codigo_empresa'
+          SQLFieldName = 'codigo_empresa'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField3: TdaField
+          Alias = 'codigo_cidade_ibge'
+          DisplayWidth = 7
+          FieldAlias = 'codigo_cidade_ibge'
+          FieldLength = 7
+          FieldName = 'codigo_cidade_ibge'
+          SQLFieldName = 'codigo_cidade_ibge'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField4: TdaField
+          Alias = 'nome_fantasia'
+          DisplayWidth = 100
+          FieldAlias = 'nome_fantasia'
+          FieldLength = 100
+          FieldName = 'nome_fantasia'
+          SQLFieldName = 'nome_fantasia'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField5: TdaField
+          Alias = 'razao_social'
+          DisplayWidth = 100
+          FieldAlias = 'razao_social'
+          FieldLength = 100
+          FieldName = 'razao_social'
+          SQLFieldName = 'razao_social'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField6: TdaField
+          Alias = 'data_hora_cadastro'
+          DataType = dtDateTime
+          DisplayWidth = 34
+          FieldAlias = 'data_hora_cadastro'
+          FieldLength = 0
+          FieldName = 'data_hora_cadastro'
+          SQLFieldName = 'data_hora_cadastro'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField7: TdaField
+          Alias = 'cnpj'
+          DisplayWidth = 20
+          FieldAlias = 'cnpj'
+          FieldLength = 20
+          FieldName = 'cnpj'
+          SQLFieldName = 'cnpj'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField8: TdaField
+          Alias = 'crt'
+          DisplayWidth = 8190
+          FieldAlias = 'crt'
+          FieldLength = 8190
+          FieldName = 'crt'
+          SQLFieldName = 'crt'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField9: TdaField
+          Alias = 'cnae'
+          DisplayWidth = 10
+          FieldAlias = 'cnae'
+          FieldLength = 10
+          FieldName = 'cnae'
+          SQLFieldName = 'cnae'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField10: TdaField
+          Alias = 'ie'
+          DisplayWidth = 20
+          FieldAlias = 'ie'
+          FieldLength = 20
+          FieldName = 'ie'
+          SQLFieldName = 'ie'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField11: TdaField
+          Alias = 'im'
+          DisplayWidth = 20
+          FieldAlias = 'im'
+          FieldLength = 20
+          FieldName = 'im'
+          SQLFieldName = 'im'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField12: TdaField
+          Alias = 'endereco'
+          DisplayWidth = 100
+          FieldAlias = 'endereco'
+          FieldLength = 100
+          FieldName = 'endereco'
+          SQLFieldName = 'endereco'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField13: TdaField
+          Alias = 'numero'
+          DisplayWidth = 50
+          FieldAlias = 'numero'
+          FieldLength = 50
+          FieldName = 'numero'
+          SQLFieldName = 'numero'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField14: TdaField
+          Alias = 'complemento'
+          DisplayWidth = 100
+          FieldAlias = 'complemento'
+          FieldLength = 100
+          FieldName = 'complemento'
+          SQLFieldName = 'complemento'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField15: TdaField
+          Alias = 'bairro'
+          DisplayWidth = 100
+          FieldAlias = 'bairro'
+          FieldLength = 100
+          FieldName = 'bairro'
+          SQLFieldName = 'bairro'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField16: TdaField
+          Alias = 'cidade'
+          DisplayWidth = 100
+          FieldAlias = 'cidade'
+          FieldLength = 100
+          FieldName = 'cidade'
+          SQLFieldName = 'cidade'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField17: TdaField
+          Alias = 'uf'
+          DisplayWidth = 2
+          FieldAlias = 'uf'
+          FieldLength = 2
+          FieldName = 'uf'
+          SQLFieldName = 'uf'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField18: TdaField
+          Alias = 'pais'
+          DisplayWidth = 100
+          FieldAlias = 'pais'
+          FieldLength = 100
+          FieldName = 'pais'
+          SQLFieldName = 'pais'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField19: TdaField
+          Alias = 'cep'
+          DisplayWidth = 9
+          FieldAlias = 'cep'
+          FieldLength = 9
+          FieldName = 'cep'
+          SQLFieldName = 'cep'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField20: TdaField
+          Alias = 'telefone'
+          DisplayWidth = 20
+          FieldAlias = 'telefone'
+          FieldLength = 20
+          FieldName = 'telefone'
+          SQLFieldName = 'telefone'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField21: TdaField
+          Alias = 'celular'
+          DisplayWidth = 20
+          FieldAlias = 'celular'
+          FieldLength = 20
+          FieldName = 'celular'
+          SQLFieldName = 'celular'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField22: TdaField
+          Alias = 'site'
+          DisplayWidth = 1000
+          FieldAlias = 'site'
+          FieldLength = 1000
+          FieldName = 'site'
+          SQLFieldName = 'site'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField23: TdaField
+          Alias = 'email'
+          DisplayWidth = 1000
+          FieldAlias = 'email'
+          FieldLength = 1000
+          FieldName = 'email'
+          SQLFieldName = 'email'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField24: TdaField
+          Alias = 'fax'
+          DisplayWidth = 20
+          FieldAlias = 'fax'
+          FieldLength = 20
+          FieldName = 'fax'
+          SQLFieldName = 'fax'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField25: TdaField
+          Alias = 'data_fundacao_empresa'
+          DataType = dtDate
+          DisplayWidth = 10
+          FieldAlias = 'data_fundacao_empresa'
+          FieldLength = 0
+          FieldName = 'data_fundacao_empresa'
+          SQLFieldName = 'data_fundacao_empresa'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField26: TdaField
+          Alias = 'logo'
+          DataType = dtBLOB
+          DisplayWidth = 10
+          FieldAlias = 'logo'
+          FieldLength = 0
+          FieldName = 'logo'
+          Linkable = False
+          SQLFieldName = 'logo'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField27: TdaField
+          Alias = 'observacao'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'observacao'
+          FieldLength = 0
+          FieldName = 'observacao'
+          Linkable = False
+          SQLFieldName = 'observacao'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField28: TdaField
+          Alias = 'aliquota_iss'
+          DataType = dtDouble
+          DisplayWidth = 16
+          FieldAlias = 'aliquota_iss'
+          FieldLength = 2
+          FieldName = 'aliquota_iss'
+          SQLFieldName = 'aliquota_iss'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField29: TdaField
+          Alias = 'aliquota_icms'
+          DataType = dtDouble
+          DisplayWidth = 16
+          FieldAlias = 'aliquota_icms'
+          FieldLength = 2
+          FieldName = 'aliquota_icms'
+          SQLFieldName = 'aliquota_icms'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField30: TdaField
+          Alias = 'certificado'
+          DisplayWidth = 250
+          FieldAlias = 'certificado'
+          FieldLength = 250
+          FieldName = 'certificado'
+          SQLFieldName = 'certificado'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField31: TdaField
+          Alias = 'certificado_senha'
+          DisplayWidth = 250
+          FieldAlias = 'certificado_senha'
+          FieldLength = 250
+          FieldName = 'certificado_senha'
+          SQLFieldName = 'certificado_senha'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField32: TdaField
+          Alias = 'ambiente_nfe'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'ambiente_nfe'
+          FieldLength = 0
+          FieldName = 'ambiente_nfe'
+          SQLFieldName = 'ambiente_nfe'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daField33: TdaField
+          Alias = 'ambiente_nfce'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'ambiente_nfce'
+          FieldLength = 0
+          FieldName = 'ambiente_nfce'
+          SQLFieldName = 'ambiente_nfce'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+          TableSQLAlias = 'vv_empresa'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'vv_empresa'
+          JoinType = dajtNone
+          SQLAlias = 'vv_empresa'
+          TableAlias = 'vv_empresa'
+          TableName = 'vv_empresa'
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650611
+      5265706F72744265666F72655072696E740B50726F6772616D54797065070B74
+      7450726F63656475726506536F75726365062D70726F63656475726520526570
+      6F72744265666F72655072696E743B0D0A626567696E0D0A0D0A656E643B0D0A
+      0D436F6D706F6E656E744E616D6506065265706F7274094576656E744E616D65
+      060B4265666F72655072696E74074576656E7449440201084361726574506F73
+      0102010203000001060F5472614576656E7448616E646C65720B50726F677261
+      6D4E616D65061365647444617461417475616C4F6E5072696E740B50726F6772
+      616D54797065070B747450726F63656475726506536F75726365065570726F63
+      65647572652065647444617461417475616C4F6E5072696E743B0D0A62656769
+      6E0D0A20202065647444617461417475616C2E417344617465203A3D20437572
+      72656E74446174653B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506
+      0C65647444617461417475616C094576656E744E616D6506074F6E5072696E74
+      074576656E7449440220084361726574506F730102270203000000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 0
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end
